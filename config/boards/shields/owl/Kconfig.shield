@@ -1,0 +1,8 @@
+# Copyright (c) 2023 Bill Hu
+# SPDX-License-Identifier: MIT
+
+config SHIELD_OWL_LEFT
+    def_bool $(shields_list_contains,owl_left)
+
+config SHIELD_OWL_RIGHT
+    def_bool $(shields_list_contains,owl_right)

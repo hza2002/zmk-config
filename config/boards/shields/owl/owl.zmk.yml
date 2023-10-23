@@ -1,0 +1,14 @@
+file_format: "1"
+id: owl
+name: Owl
+type: shield
+url: https://github.com/hza2002/owl
+requires: [pro_micro]
+expose: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - owl_left
+  - owl_right
