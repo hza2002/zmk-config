@@ -32,5 +32,5 @@ copy:
 	scp -r release localmac:~/Downloads
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR) $(RELEASE_DIR)
 	mkdir ./build ./build/left ./build/right ./release
