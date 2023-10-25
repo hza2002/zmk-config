@@ -1,14 +1,17 @@
-if SHIELD_WHY_LEFT
+# Copyright (c) 2020 Ryan Cross
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SOFLE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Why"
+    default "Sofle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_WHY_LEFT || SHIELD_WHY_RIGHT
+if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
 
 config ZMK_SPLIT
     default y
@@ -42,5 +45,11 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+if ZMK_RGB_UNDERGLOW
+
+config WS2812_STRIP
+    default y
+endif
 
 endif

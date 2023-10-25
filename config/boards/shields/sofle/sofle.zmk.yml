@@ -1,14 +1,15 @@
 file_format: "1"
-id: why
-name: Why
+id: sofle
+name: Sofle
 type: shield
-url: https://github.com/foostan/crkbd/
+url: https://github.com/josefadamcik/SofleKeyboard
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
   - display
+  - encoder
   - underglow
 siblings:
-  - why_left
-  - why_right
+  - sofle_left
+  - sofle_right

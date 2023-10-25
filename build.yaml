@@ -22,6 +22,6 @@ include:
   # - board: nrfmicro_13
   #   shield: owl_right
   - board: nice_nano_v2
-    shield: why_left
+    shield: sofle_left
   - board: nice_nano_v2
-    shield: why_right
+    shield: sofle_right
