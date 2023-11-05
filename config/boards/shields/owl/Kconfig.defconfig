@@ -4,7 +4,7 @@
 if SHIELD_OWL_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Owl"
+    default "Owl Choc"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y

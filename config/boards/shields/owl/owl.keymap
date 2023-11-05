@@ -26,10 +26,10 @@
 // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |   RET   |  |   BSPC  |    N    |    M    |    ,    |    .    |    /    |    \    |
 //                               |  L ALT  |   GUI   | SPA/LOW |   RET   |  |   BSPC  | SPA/RAI |   ESC   |  R ALT  |
             bindings = <
-&kp TAB        &kp Q &kp W    &kp E    &kp R    &kp T                                   &kp Y           &kp U   &kp I     &kp O   &kp P    &kp GRAVE
-&kp LCTRL      &kp A &kp S    &kp D    &kp F    &kp G                                   &kp H           &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-&mt LSHIFT F19 &kp Z &kp X    &kp C    &kp V    &kp B           &kp RET        &kp BSPC &kp N           &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                              &kp LALT &kp LGUI &lt LOWER SPACE &mt LSHIFT RET &kp BSPC &lt RAISE SPACE &kp ESC &mt RALT LS(LC(LA(LG(R))))
+&kp TAB        &kp Q &kp W    &kp E    &kp R    &kp T                            &kp Y           &kp U   &kp I     &kp O   &kp P    &kp GRAVE
+&kp LCTRL      &kp A &kp S    &kp D    &kp F    &kp G                            &kp H           &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+&mt LSHIFT F19 &kp Z &kp X    &kp C    &kp V    &kp B           &kp RET &kp DEL  &kp N           &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                              &kp LALT &kp LGUI &lt LOWER SPACE &kp RET &kp BSPC &lt RAISE SPACE &kp ESC &kp RALT
             >;
         };
 
@@ -38,12 +38,12 @@
 // |         | LA(F13) |   PGUP  | LA(F14) |    +    |    [    |                      |    ]    |    7    |    8    |    9    |         |         |
 // |         |   HOME  |   PGDN  |   END   |    =    |    (    |                      |    )    |    4    |    5    |    6    |         |         |
 // |         |   F15   |   F16   |   F17   |    -    |    {    |         |  |         |    }    |    1    |    2    |    3    |         |         |
-//                               |   F18   |         |         |         |  |   DEL   | R SHIFT |    0    |         |
+//                               |   F18   |         |         |         |  |   DEL   | R SHIFT |    0    |RET YABAI| 
            bindings = <
-&trans &kp F13  &kp PG_UP &kp F14 &kp PLUS  &kp LBKT                &kp RBKT  &kp N7 &kp N8 &kp N9 &trans &trans
-&trans &kp HOME &kp PG_DN &kp END &kp EQUAL &kp LPAR                &kp RPAR  &kp N4 &kp N5 &kp N6 &trans &trans
-&trans &kp F15  &kp F16   &kp F17 &kp MINUS &kp LBRC &trans &trans  &kp RBRC  &kp N1 &kp N2 &kp N3 &trans &trans
-                          &kp F18 &trans    &trans   &trans &kp DEL &kp RSHFT &kp N0 &trans
+&trans &kp F13  &kp PG_UP &kp F14 &kp PLUS  &kp LBKT               &kp RBKT  &kp N7 &kp N8 &kp N9 &trans &trans
+&trans &kp HOME &kp PG_DN &kp END &kp EQUAL &kp LPAR               &kp RPAR  &kp N4 &kp N5 &kp N6 &trans &trans
+&trans &kp F15  &kp F16   &kp F17 &kp MINUS &kp LBRC &trans &trans &kp RBRC  &kp N1 &kp N2 &kp N3 &trans &trans
+                          &kp F18 &trans    &trans   &trans &trans &kp RSHFT &kp N0 &mt RALT LC(LA(LG(R)))
             >;
         };
 
@@ -52,12 +52,12 @@
 // |  BTCLR  |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |                      |         |   F13   |    UP   |   F14   |         |  REBOOT |
 // | RGB TOG | RGB HUI | RGB SAI | RGB BRI | RGB SPI | RGB EFF |                      |         |   LEFT  |   DOWN  |  RIGHT  |         |  RESET  |
 // | OUT TOG | RGB HUD | RGB SAD | RGB BRD | RGB SPD | RGB EFR |         |  |         |         |         | LCAG(F) |         |         |  EP TOG |
-//                               |         |         |         |         |  |         |         |         |         |         |
+//                               |         |         |         |         |  |         |         |         |         |         
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                  &trans &kp F13  &kp UP            &kp F14   &trans &bootloader
-&rgb_ug RGB_TOG &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF               &trans &kp LEFT &kp DOWN          &kp RIGHT &trans &sys_reset
-&out OUT_TOG    &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans &trans &trans &trans   &kp LC(LA(LG(F))) &trans    &trans &ext_power EP_TOG 
-                                                &trans          &trans          &trans          &trans &trans &trans &trans   &trans
+&bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                  &trans &kp F13  &kp UP            &kp F14   &trans &bootloader
+&trans     &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF               &trans &kp LEFT &kp DOWN          &kp RIGHT &trans &sys_reset
+&trans     &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans          &trans &trans &trans &trans   &kp LC(LA(LG(F))) &trans    &trans &out OUT_TOG
+                                           &trans          &trans          &trans          &trans &trans &trans &trans   &trans
             >;
         };
     };
