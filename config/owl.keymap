@@ -5,59 +5,72 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/ext_power.h>
-
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        alpha {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   TAB   |    Q    |    W    |    E    |    R    |    T    |                      |    Y    |    U    |    I    |    O    |    P    |    `    |
-// |  CTRL   |    A    |    S    |    D    |    F    |    G    |                      |    H    |    J    |    K    |    L    |    ;    |    '    |
-// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |   RET   |  |   BSPC  |    N    |    M    |    ,    |    .    |    /    |    \    |
-//                               |  L ALT  |   GUI   | SPA/LOW |   RET   |  |   BSPC  | SPA/RAI |   ESC   |  R ALT  |
+// |   TAB   |    Q    |    W    |    E    |    R    |    T    |                      |    Y    |    U    |    I    |    O    |    P    |   `    |
+// |  CTRL   |    A    |    S    |    D    |    F    |    G    |                      |    H    |    J    |    K    |    L    |    ;    |   '    |
+// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |   RET   |  |   BSPC  |    N    |    M    |    ,    |    .    |    /    |   \    |
+//                               |  L ALT  |   GUI   | SPACE/1 |   RET   |  |   BSPC  | SPACE/2 |   ESC   |  R ALT  |
+
             bindings = <
-&kp TAB        &kp Q &kp W    &kp E    &kp R    &kp T                            &kp Y           &kp U   &kp I     &kp O   &kp P    &kp GRAVE
-&kp LCTRL      &kp A &kp S    &kp D    &kp F    &kp G                            &kp H           &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-&mt LSHIFT F19 &kp Z &kp X    &kp C    &kp V    &kp B           &kp RET &kp DEL  &kp N           &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                              &kp LALT &kp LGUI &lt LOWER SPACE &kp RET &kp BSPC &lt RAISE SPACE &kp ESC &kp RALT
+&mo 3          &kp Q  &kp W  &kp E     &kp R     &kp T                                  &kp Y        &kp U    &kp I      &kp O    &kp P     &kp GRAVE
+&kp LCTRL      &kp A  &kp S  &kp D     &kp F     &kp G                                  &kp H        &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT F19  &kp Z  &kp X  &kp C     &kp V     &kp B        &key_repeat     &kp TAB   &kp N        &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                             &kp LALT  &kp LGUI  &lt 1 SPACE  &mt LSHIFT RET  &kp BSPC  &lt 2 SPACE  &kp ESC  &kp RALT
             >;
         };
 
-        lower_layer {
+        number {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |         | LA(F13) |   PGUP  | LA(F14) |    +    |    [    |                      |    ]    |    7    |    8    |    9    |         |         |
-// |         |   HOME  |   PGDN  |   END   |    =    |    (    |                      |    )    |    4    |    5    |    6    |         |         |
-// |         |   F15   |   F16   |   F17   |    -    |    {    |         |  |         |    }    |    1    |    2    |    3    |         |         |
-//                               |   F18   |         |         |         |  |   DEL   | R SHIFT |    0    |RET YABAI| 
-           bindings = <
-&trans &kp F13  &kp PG_UP &kp F14 &kp PLUS  &kp LBKT               &kp RBKT  &kp N7 &kp N8 &kp N9 &trans &trans
-&trans &kp HOME &kp PG_DN &kp END &kp EQUAL &kp LPAR               &kp RPAR  &kp N4 &kp N5 &kp N6 &trans &trans
-&trans &kp F15  &kp F16   &kp F17 &kp MINUS &kp LBRC &trans &trans &kp RBRC  &kp N1 &kp N2 &kp N3 &trans &trans
-                          &kp F18 &trans    &trans   &trans &trans &kp RSHFT &kp N0 &mt RALT LC(LA(LG(R)))
+// |  none   |   F7    |   F8    |   F9    |   PLUS  |   F12   |                        |   STAR  |   N7    |   N8    |   N9   |  none |   `   |
+// |  LCTRL  |   F4    |   F5    |   F6    |  MINUS  |   F11   |                        |  SLASH  |   N4    |   N5    |   N6   |  ;    |   '   |
+// | LSHIFT  |   F1    |   F2    |   F3    |  EQUAL  |   F10   |   key_repeat  |   DOT  |   N0    |   N1    |   N2    |   N3   |   /   |   \   |
+//                               |  LALT   |   LCMD  |  none   |  SHIFT RET    |  BSPC  |  SPACE  |   ESC   |  RALT   |
+
+            bindings = <
+&none       &kp F7  &kp F8  &kp F9    &kp PLUS   &kp F12                            &kp STAR     &kp N7   &kp N8    &kp N9  &none     &kp GRAVE
+&kp LCTRL   &kp F4  &kp F5  &kp F6    &kp MINUS  &kp F11                            &kp SLASH    &kp N4   &kp N5    &kp N6  &kp SEMI  &kp SQT
+&kp LSHIFT  &kp F1  &kp F2  &kp F3    &kp EQUAL  &kp F10  &key_repeat     &kp DOT   &kp N0       &kp N1   &kp N2    &kp N3  &kp FSLH  &kp BSLH
+                            &kp LALT  &kp LCMD   &none    &mt LSHIFT RET  &kp BSPC  &lt 2 SPACE  &kp ESC  &kp RALT
             >;
         };
 
-        raise_layer {
+        symbol {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  BTCLR  |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |                      |         |   F13   |    UP   |   F14   |         |  REBOOT |
-// | RGB TOG | RGB HUI | RGB SAI | RGB BRI | RGB SPI | RGB EFF |                      |         |   LEFT  |   DOWN  |  RIGHT  |         |  RESET  |
-// | OUT TOG | RGB HUD | RGB SAD | RGB BRD | RGB SPD | RGB EFR |         |  |         |         |         | LCAG(F) |         |         |  EP TOG |
-//                               |         |         |         |         |  |         |         |         |         |         
+// |  LG(TAB)  |   F13    |   PG_UP    |   F14    |   PLUS  |   LBKT  |                      |   RBKT  |   AMPS  |  STAR  |  none  |  none |   `   |
+// |  LCTRL    |   HOME   |   PG_DN    |   END    |  MINUS  |   LPAR  |                      |   RPAR  |   DLLR  |  PRCNT |  CARET |  ;    |   '   |
+// |  LSHIFT   |  LA(F13) |  LA(LG(F)) |  LA(F14) |  EQUAL  |   LBRC  |   key_repeat |  TAB  |   RBRC  |  EXCL   |   AT   |  HASH  |   /   |   \   |
+//                                     |   LALT   |  LCMD   |  SPACE  |  SHIFT RET   |  BSPC |  none   |  ESC    |  RALT  |
+
             bindings = <
-&bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                  &trans &kp F13  &kp UP            &kp F14   &trans &bootloader
-&trans     &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF               &trans &kp LEFT &kp DOWN          &kp RIGHT &trans &sys_reset
-&trans     &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans          &trans &trans &trans &trans   &kp LC(LA(LG(F))) &trans    &trans &out OUT_TOG
-                                           &trans          &trans          &trans          &trans &trans &trans &trans   &trans
+&kp LG(TAB)  &kp F13      &kp PG_UP      &kp F14       &kp PLUS   &kp LBKT                               &kp RBKT  &kp AMPS  &kp STAR       &none      &none     &kp GRAVE
+&kp LCTRL    &kp HOME     &kp PG_DN      &kp END       &kp MINUS  &kp LPAR                               &kp RPAR  &kp DLLR  &kp PRCNT      &kp CARET  &kp SEMI  &kp SQT
+&kp LSHIFT   &kp LA(F13)  &kp LA(LG(F))  &kp LA(F14)   &kp EQUAL  &kp LBRC     &key_repeat     &kp TAB   &kp RBRC  &kp EXCL  &kp AT         &kp HASH   &kp FSLH  &kp BSLH
+                                         &kp LEFT_ALT  &kp LCMD   &lt 1 SPACE  &mt LSHIFT RET  &kp BSPC  &none     &kp ESC   &kp RIGHT_ALT
+            >;
+        };
+
+        system {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |  none      | BT_SEL 0 | BT_SEL 1 | BT_SEL 2 | BT_SEL 3 | BT_SEL 4 |                           | LA(F13) |   F13   |   F14   | LA(F14) |  none  |  none  |
+// | bootloader | RGB_HUI  | RGB_SAI  | RGB_BRI  | RGB_SPI  | RGB_EFF  |                           |   LEFT  |   DOWN  |   UP    |  RIGHT  |  none  |  none  |
+// |  BT_CLR    | RGB_HUD  | RGB_SAD  | RGB_BRD  | RGB_SPD  | RGB_EFR  |  OUT_TOG  | LS(LA(LG(Y))) |   F15   |   F16   |   F17   |   F18   |  none  |  none  |
+//                                    |   LALT   |   LCMD   |  SPACE   | SHIFT RET |   DEL         |  SPACE  |   ESC   |   RALT  |
+
+            bindings = <
+&none        &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                        &kp LA(F13)  &kp F13   &kp F14   &kp LA(F14)  &none  &none
+&bootloader  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                                     &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT    &none  &none
+&bt BT_CLR   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &out OUT_TOG    &kp LS(LA(LG(Y)))  &kp F15      &kp F16   &kp F17   &kp F18      &none  &none
+                                               &kp LALT         &kp LCMD         &kp SPACE        &mt LSHIFT RET  &kp DEL            &kp SPACE    &kp ESC   &kp RALT
             >;
         };
     };
