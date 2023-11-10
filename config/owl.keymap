@@ -16,14 +16,14 @@
 
         alpha {
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E     &kp R     &kp T                                 &kp Y        &kp U         &kp I         &kp O    &kp P     &kp GRAVE
-&kp LCTRL      &kp A  &kp S  &kp D     &kp F     &kp G                                 &kp H        &kp J         &kp K         &kp L    &kp SEMI  &kp SQT
-&mt LSHFT F19  &kp Z  &kp X  &kp C     &kp V     &kp B        &key_repeat  &caps_word  &kp N        &kp M         &kp COMMA     &kp DOT  &kp FSLH  &kp BSLH
-                             &kp LALT  &kp LGUI  &lt 1 SPACE  &kp RET      &kp BSPC    &lt 2 SPACE  &mt RCMD ESC  &mt RALT DEL
+&kp TAB        &kp Q  &kp W  &kp E     &kp R     &kp T                                 &kp Y        &kp U         &kp I      &kp O    &kp P     &kp GRAVE
+&kp LCTRL      &kp A  &kp S  &kp D     &kp F     &kp G                                 &kp H        &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT F19  &kp Z  &kp X  &kp C     &kp V     &kp B        &key_repeat  &caps_word  &kp N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                             &kp LALT  &kp LGUI  &lt 1 SPACE  &kp RET      &kp BSPC    &lt 2 SPACE  &mt RCMD ESC  &kp RALT
             >;
         };
 
-        versatile {
+        arrow {
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |  LG(TAB)  |   F13    |   PG_UP    |   F14    |   PLUS  |   LBKT  |                            |   RBKT  |   AMPS  |  STAR  |  none  |  none |   `   |
             // |  LCTRL    |   HOME   |   PG_DN    |   END    |  MINUS  |   LPAR  |                            |   RPAR  |   DLLR  |  PRCNT |  CARET |  ;    |   '   |
@@ -31,23 +31,23 @@
             //                                     |   LALT   |   LGUI  |   none  |   RET          |  BSPC     |   SPC   |  ESC    |  RALT  |
 
             bindings = <
-&kp LS(LG(TAB))  &kp F13      &kp PG_UP      &kp F14       &kp PLUS   &kp LBKT                         &kp RBKT         &kp N7       &kp N8        &kp N9  &kp ESC   &kp GRAVE
-&kp LCTRL        &kp HOME     &kp PG_DN      &kp END       &kp EQUAL  &kp LPAR                         &kp RPAR         &kp N4       &kp N5        &kp N6  &kp SEMI  &kp SQT
-&kp LSHFT        &kp LA(F13)  &kp LA(LG(F))  &kp LA(F14)   &kp MINUS  &kp LBRC  &key_repeat  &tog 3    &kp RBRC         &kp N1       &kp N2        &kp N3  &kp FSLH  &kp BSLH
-                                             &kp LEFT_ALT  &kp LCMD   &none     &kp RET      &kp BSPC  &mt RSHFT SPACE  &mt RCMD N0  &mt RALT DEL
-            >;
-        };
-
-        fn {
-            bindings = <
-&kp TAB    &kp F1   &kp F2   &kp F3    &kp F4    &kp F5                                       &kp HOME     &kp PG_DN  &kp PG_UP     &kp END    &none  &none
-&kp LCTRL  &kp F6   &kp F7   &kp F8    &kp F9    &kp F10                                      &kp LEFT     &kp DOWN   &kp UP        &kp RIGHT  &none  &none
-&kp LSHFT  &kp F11  &kp F12  &none     &none     &none        &key_repeat  &kp LS(LA(LG(Y)))  &kp F15      &kp F16    &kp F17       &kp F18    &none  &none
-                             &kp LALT  &kp LCMD  &lt 1 SPACE  &kp RET      &kp BACKSPACE      &lt 2 SPACE  &kp ESC    &mt RALT DEL
+&kp LS(TAB)  &kp F13   &kp UP    &kp F14       &kp PLUS   &kp LBKT                     &kp RBKT         &kp N7       &kp N8    &kp N9  &kp ESC   &kp GRAVE
+&kp LCTRL    &kp LEFT  &kp DOWN  &kp RIGHT     &kp EQUAL  &kp LPAR                     &kp RPAR         &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
+&kp LSHFT    &kp F15   &kp F16   &kp F17       &kp MINUS  &kp LBRC  &mo 3    &kp DEL   &kp RBRC         &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
+                                 &kp LEFT_ALT  &kp LCMD   &none     &kp RET  &kp BSPC  &mt RSHFT SPACE  &mt RCMD N0  &kp RALT
             >;
         };
 
         system {
+            bindings = <
+&kp LS(TAB)  &kp F1           &kp PG_UP      &kp F3             &kp PLUS   &kp LBKT                                          &kp RBKT  &kp N7       &kp N8    &kp N9  &kp ESC   &kp GRAVE
+&kp LCTRL    &kp HOME         &kp PG_DN      &kp END            &kp EQUAL  &kp LPAR                                          &kp RPAR  &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
+&kp LSHFT    &kp LS(LG(TAB))  &kp LA(LG(F))  &kp LS(LA(LG(Y)))  &kp MINUS  &kp LBRC              &kp LS(RET)  &mo 3          &kp RBRC  &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
+                                             &kp LALT           &kp LCMD   &mt LEFT_SHIFT SPACE  &kp RET      &kp BACKSPACE  &none     &mt RCMD N0  &kp RALT
+            >;
+        };
+
+        fn {
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |   TAB   |  BT_SEL 0 |  BT_SEL 1 |  BT_SEL 2 |  BT_SEL 3 |  BT_SEL 4 |                              | LA(F13) |   F13   |   F14   |  LA(F14) |  none  |   BT_CLR  |
             // |  LCTRL  |  RGB_HUI  |  RGB_SAI  |  RGB_BRI  |  RGB_SPI  |  RGB_EFF  |                              |   LEFT  |   DOWN  |   UP    |   RIGHT  |  none  |  OUT_TOG  |
@@ -55,10 +55,10 @@
             //                                   |  LALT     |  LGUI     |    SPC    |  none        |   DEL         |   SPC   |   ESC   |   RALT  |
 
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                    &none  &none  &none  &none  &none  &none
-&out OUT_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                 &none  &none  &none  &none  &none  &none
-&sys_reset    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &none  &tog 3  &none  &none  &none  &none  &none  &none
-                                                &none            &none            &none            &none  &none   &none  &none  &none
+&bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                   &none  &kp F7  &kp F8  &kp F9  &kp F12  &none
+&out OUT_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&sys_reset    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &none  &none  &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                                                &none            &none            &none            &none  &none  &none  &none   &none
             >;
         };
     };
