@@ -23,7 +23,7 @@
             >;
         };
 
-        navigation {
+        number {
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |  LG(TAB)  |   F13    |   PG_UP    |   F14    |   PLUS  |   LBKT  |                            |   RBKT  |   AMPS  |  STAR  |  none  |  none |   `   |
             // |  LCTRL    |   HOME   |   PG_DN    |   END    |  MINUS  |   LPAR  |                            |   RPAR  |   DLLR  |  PRCNT |  CARET |  ;    |   '   |
@@ -38,12 +38,12 @@
             >;
         };
 
-        number {
+        character {
             bindings = <
-&kp LS(TAB)  &kp LEFT_PARENTHESIS  &kp PLUS  &kp EQUAL  &kp MINUS  &kp RIGHT_PARENTHESIS                              &kp LEFT   &kp DOWN      &kp UP    &kp RIGHT  &kp BSPC  &kp GRAVE
-&kp LCTRL    &kp N1                &kp N2    &kp N3     &kp N4     &kp N5                                             &kp N6     &kp N7        &kp N8    &kp N9     &kp N0    &kp SQT
-&kp LSHFT    &kp EXCL              &kp AT    &kp HASH   &kp DLLR   &kp PRCNT              &key_repeat  &key_repeat    &kp CARET  &kp AMPS      &kp STAR  &kp DOT    &kp FSLH  &kp BSLH
-                                             &kp LALT   &kp LCMD   &kp SPACE              &kp RET      &kp BACKSPACE  &none      &mt RCMD ESC  &kp RALT
+&kp LS(TAB)  &none            &none          &none      &none                 &none                                              &kp HOME  &kp PG_DN     &kp PG_UP  &kp END    &kp BSPC  &kp GRAVE
+&kp LCTRL    &kp EXCLAMATION  &kp AT_SIGN    &kp POUND  &kp DOLLAR            &kp PERCENT                                        &kp LEFT  &kp DOWN      &kp UP     &kp RIGHT  &kp SEMI  &kp SQT
+&kp LSHFT    &kp CARET        &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &key_repeat  &key_repeat    &kp F13   &kp F14       &kp COMMA  &kp DOT    &kp FSLH  &kp BSLH
+                                             &kp LALT   &kp LCMD              &kp SPACE              &kp RET      &kp BACKSPACE  &none     &mt RCMD ESC  &kp RALT
             >;
         };
 
