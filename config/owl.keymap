@@ -16,10 +16,10 @@
 
         alpha {
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E     &kp R     &kp T                               &kp Y  &kp U         &kp I      &kp O    &kp P     &kp GRAVE
-&kp LCTRL      &kp A  &kp S  &kp D     &kp F     &kp G                               &kp H  &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-&mt LSHFT F19  &kp Z  &kp X  &kp C     &kp V     &kp B        &key_repeat  &to 3     &kp N  &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                             &kp LALT  &kp LGUI  &lt 1 SPACE  &kp RET      &kp BSPC  &mo 2  &mt RCMD ESC  &kp RALT
+&kp TAB        &kp Q  &kp W  &kp E     &mt PLUS R   &mt LBKT T                                     &mt RBKT Y               &kp U         &kp I      &kp O    &kp P     &kp GRAVE
+&kp LCTRL      &kp A  &kp S  &kp D     &mt EQUAL F  &mt LEFT_PARENTHESIS G                         &mt RIGHT_PARENTHESIS H  &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT F19  &kp Z  &kp X  &kp C     &mt MINUS V  &mt LEFT_BRACE B        &key_repeat  &to 3     &mt RIGHT_BRACE N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                             &kp LALT  &kp LGUI     &lt 1 SPACE             &kp RET      &kp BSPC  &lt 2 SPACE              &mt RCMD ESC  &kp RALT
             >;
         };
 
@@ -31,10 +31,10 @@
             //                                     |   LALT   |   LGUI  |   none  |   RET          |  BSPC     |   SPC   |  ESC    |  RALT  |
 
             bindings = <
-&kp LS(TAB)  &kp F13   &kp PG_UP  &kp F14       &kp PLUS   &kp LBKT                                       &kp RBKT               &kp N7       &kp N8    &kp N9  &kp DOT   &kp GRAVE
-&kp LCTRL    &kp HOME  &kp PG_DN  &kp END       &kp EQUAL  &kp LEFT_PARENTHESIS                           &kp RIGHT_PARENTHESIS  &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
-&kp LSHFT    &kp F15   &kp F16    &kp F17       &kp MINUS  &kp LEFT_BRACE        &kp LG(LA(F))  &kp DEL   &kp RIGHT_BRACE        &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
-                                  &kp LEFT_ALT  &kp LCMD   &none                 &kp RET        &kp BSPC  &kp SPACE              &mt RCMD N0  &kp RALT
+&kp LS(TAB)  &kp F13   &kp PG_UP  &kp F14       &kp PLUS   &kp LBKT                                          &kp RBKT               &kp N7       &kp N8    &kp N9  &kp DOT   &kp GRAVE
+&kp LCTRL    &kp HOME  &kp PG_DN  &kp END       &kp EQUAL  &kp LEFT_PARENTHESIS                              &kp RIGHT_PARENTHESIS  &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
+&kp LSHFT    &kp F15   &kp F16    &kp F17       &kp MINUS  &kp LEFT_BRACE        &kp LG(LA(F))  &key_repeat  &kp RIGHT_BRACE        &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
+                                  &kp LEFT_ALT  &kp LCMD   &none                 &kp RET        &kp BSPC     &kp SPACE              &mt RCMD N0  &kp RALT
             >;
         };
 
@@ -42,7 +42,7 @@
             bindings = <
 &kp LS(TAB)  &kp LEFT_PARENTHESIS  &kp PLUS  &kp EQUAL  &kp MINUS  &kp RIGHT_PARENTHESIS                              &kp LEFT   &kp DOWN      &kp UP    &kp RIGHT  &kp BSPC  &kp GRAVE
 &kp LCTRL    &kp N1                &kp N2    &kp N3     &kp N4     &kp N5                                             &kp N6     &kp N7        &kp N8    &kp N9     &kp N0    &kp SQT
-&kp LSHFT    &kp EXCL              &kp AT    &kp HASH   &kp DLLR   &kp PRCNT              &key_repeat  &kp SPACE      &kp CARET  &kp AMPS      &kp STAR  &kp DOT    &kp FSLH  &kp BSLH
+&kp LSHFT    &kp EXCL              &kp AT    &kp HASH   &kp DLLR   &kp PRCNT              &key_repeat  &key_repeat    &kp CARET  &kp AMPS      &kp STAR  &kp DOT    &kp FSLH  &kp BSLH
                                              &kp LALT   &kp LCMD   &kp SPACE              &kp RET      &kp BACKSPACE  &none      &mt RCMD ESC  &kp RALT
             >;
         };
