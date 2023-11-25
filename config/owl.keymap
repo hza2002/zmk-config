@@ -31,10 +31,10 @@
             //                                     |   LALT   |   LGUI  |   none  |   RET          |  BSPC     |   SPC   |  ESC    |  RALT  |
 
             bindings = <
-&kp LS(TAB)  &kp F13   &kp PG_UP  &kp F14       &kp PLUS   &kp LBKT                                       &kp RBKT               &kp F13       &kp UP    &kp F14    &kp F22   &kp GRAVE
-&kp LCTRL    &kp HOME  &kp PG_DN  &kp END       &kp EQUAL  &kp LEFT_PARENTHESIS                           &kp RIGHT_PARENTHESIS  &kp LEFT      &kp DOWN  &kp RIGHT  &kp SEMI  &kp SQT
-&kp LSHFT    &kp F15   &kp F16    &kp F17       &kp MINUS  &kp LEFT_BRACE        &kp LG(LA(F))  &kp DEL   &kp RIGHT_BRACE        &kp F18       &kp F20   &kp F21    &kp FSLH  &kp BSLH
-                                  &kp LEFT_ALT  &kp LCMD   &none                 &kp RET        &kp BSPC  &kp SPACE              &mt RCMD ESC  &kp RALT
+&kp LS(TAB)  &kp F13   &kp PG_UP  &kp F14       &kp PLUS   &kp LBKT                                       &kp RBKT               &kp N7       &kp N8    &kp N9  &kp DOT   &kp GRAVE
+&kp LCTRL    &kp HOME  &kp PG_DN  &kp END       &kp EQUAL  &kp LEFT_PARENTHESIS                           &kp RIGHT_PARENTHESIS  &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
+&kp LSHFT    &kp F15   &kp F16    &kp F17       &kp MINUS  &kp LEFT_BRACE        &kp LG(LA(F))  &kp DEL   &kp RIGHT_BRACE        &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
+                                  &kp LEFT_ALT  &kp LCMD   &none                 &kp RET        &kp BSPC  &kp SPACE              &mt RCMD N0  &kp RALT
             >;
         };
 
