@@ -16,10 +16,10 @@
 
         alpha {
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E     &mt PLUS R   &mt LBKT T                                     &mt RBKT Y               &kp U         &kp I      &kp O    &kp P     &kp GRAVE
-&kp LCTRL      &kp A  &kp S  &kp D     &mt EQUAL F  &mt LEFT_PARENTHESIS G                         &mt RIGHT_PARENTHESIS H  &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-&mt LSHFT F19  &kp Z  &kp X  &kp C     &mt MINUS V  &mt LEFT_BRACE B        &key_repeat  &to 3     &mt RIGHT_BRACE N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                             &kp LALT  &kp LGUI     &lt 1 SPACE             &kp RET      &kp BSPC  &lt 2 SPACE              &mt RCMD ESC  &kp RALT
+&kp TAB        &kp Q  &kp W  &kp E     &kp R     &kp T                               &kp Y        &kp U         &kp I      &kp O    &kp P     &kp GRAVE
+&kp LCTRL      &kp A  &kp S  &kp D     &kp F     &kp G                               &kp H        &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LSHFT F19  &kp Z  &kp X  &kp C     &kp V     &kp B        &key_repeat  &to 3     &kp N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                             &kp LALT  &kp LGUI  &lt 1 SPACE  &kp RET      &kp BSPC  &lt 2 SPACE  &mt RCMD ESC  &kp RALT
             >;
         };
 
