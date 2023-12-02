@@ -16,10 +16,10 @@
 
         alpha {
             bindings = <
-&kp F19        &kp Q  &kp W  &kp E     &kp R     &kp T                               &kp Y        &kp U         &kp I      &kp O    &kp P     &kp GRAVE
-&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F     &kp G                               &kp H        &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-&sk LSHFT      &kp Z  &kp X  &kp C     &kp V     &kp B        &key_repeat  &to 3     &kp N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                             &kp LALT  &kp LGUI  &lt 1 SPACE  &kp RET      &kp BSPC  &lt 2 SPACE  &mt RCMD ESC  &kp RALT
+&kp LALT       &kp Q  &kp W  &kp E    &kp R     &kp T                               &kp Y        &kp U         &kp I      &kp O    &kp P     &kp GRAVE
+&mt LCTRL TAB  &kp A  &kp S  &kp D    &kp F     &kp G                               &kp H        &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&sk LSHFT      &kp Z  &kp X  &kp C    &kp V     &kp B        &key_repeat  &to 3     &kp N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                             &kp F19  &kp LGUI  &lt 1 SPACE  &kp RET      &kp BSPC  &lt 2 SPACE  &mt RCMD ESC  &kp RALT
             >;
         };
 
@@ -31,19 +31,19 @@
             //                                     |   LALT   |   LGUI  |   none  |   RET          |  BSPC     |   SPC   |  ESC    |  RALT  |
 
             bindings = <
-&kp F19            &kp F13   &kp PG_UP  &kp F14       &kp LBKT              &kp RBKT                                        &kp PLUS     &kp N7       &kp N8    &kp N9  &kp DOT   &kp GRAVE
-&mt LCTRL LS(TAB)  &kp HOME  &kp PG_DN  &kp END       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                           &kp MINUS    &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
-&sk LSHFT          &kp F15   &kp F16    &kp F17       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LG(LA(F))  &to 3     &kp EQUAL    &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
-                                        &kp LEFT_ALT  &kp LCMD              &none                  &kp RET        &kp BSPC  &lt 2 SPACE  &mt RCMD N0  &kp RALT
+&kp LALT           &kp F13   &kp PG_UP  &kp F14  &kp LS(PLUS)  &kp LBKT                                       &kp RBKT               &kp N7       &kp N8    &kp N9  &kp DOT   &kp GRAVE
+&mt LCTRL LS(TAB)  &kp HOME  &kp PG_DN  &kp END  &kp MINUS     &kp LEFT_PARENTHESIS                           &kp RIGHT_PARENTHESIS  &kp N4       &kp N5    &kp N6  &kp SEMI  &kp SQT
+&sk LSHFT          &kp F15   &kp F16    &kp F17  &kp EQUAL     &kp LEFT_BRACE        &kp LG(LA(F))  &to 3     &kp RIGHT_BRACE        &kp N1       &kp N2    &kp N3  &kp FSLH  &kp BSLH
+                                        &kp F19  &kp LCMD      &none                 &kp RET        &kp BSPC  &lt 2 SPACE            &mt RCMD N0  &kp RALT
             >;
         };
 
         character {
             bindings = <
-&kp F19        &trans  &trans  &trans    &trans    &trans                                   &trans    &trans        &trans    &trans     &trans  &trans
-&mt LCTRL TAB  &trans  &trans  &trans    &trans    &trans                                   &kp LEFT  &kp DOWN      &kp UP    &kp RIGHT  &trans  &trans
-&sk LSHFT      &trans  &trans  &trans    &trans    &trans       &key_repeat  &to 3          &trans    &trans        &trans    &trans     &trans  &trans
-                               &kp LALT  &kp LCMD  &lt 1 SPACE  &kp RET      &kp BACKSPACE  &none     &mt RCMD ESC  &kp RALT
+&kp LALT       &trans  &trans  &trans   &trans    &trans                                   &trans    &trans        &trans    &trans     &trans  &trans
+&mt LCTRL TAB  &trans  &trans  &trans   &trans    &trans                                   &kp LEFT  &kp DOWN      &kp UP    &kp RIGHT  &trans  &trans
+&sk LSHFT      &trans  &trans  &trans   &trans    &trans       &key_repeat  &to 3          &trans    &trans        &trans    &trans     &trans  &trans
+                               &kp F19  &kp LCMD  &lt 1 SPACE  &kp RET      &kp BACKSPACE  &none     &mt RCMD ESC  &kp RALT
             >;
         };
 
