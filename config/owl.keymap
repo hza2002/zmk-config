@@ -41,10 +41,10 @@
             //                                     |   LALT   |   LGUI  |   none  |   RET          |  BSPC     |   SPC   |  ESC    |  RALT  |
 
             bindings = <
-&kp TAB  &kp F13   &kp PG_UP  &kp F14  &trans  &trans                   &trans    &trans    &trans       &trans     &trans  &trans
-&trans   &kp HOME  &kp PG_DN  &kp END  &trans  &trans                   &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT  &trans  &trans
-&trans   &kp F21   &kp F22    &kp F23  &trans  &trans  &kp F20  &to 3   &trans    &trans    &trans       &trans     &trans  &trans
-                              &trans   &trans  &trans  &trans   &trans  &trans    &trans    &bootloader
+&kp TAB  &kp F13            &kp PG_UP          &kp F14  &trans  &trans                   &kp F1    &kp F2    &kp F3       &kp F4     &kp F5   &kp F6
+&trans   &kp HOME           &kp PG_DN          &kp END  &trans  &trans                   &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT  &trans   &trans
+&trans   &kp LG(LC(LA(N)))  &kp LG(LA(LC(F)))  &none    &trans  &trans  &kp F20  &to 3   &kp F7    &kp F8    &kp F9       &kp F10    &kp F11  &kp F12
+                                               &trans   &trans  &trans  &trans   &trans  &trans    &trans    &bootloader
             >;
         };
 
@@ -56,10 +56,10 @@
             //                                   |  LALT     |  LGUI     |    SPC    |  none        |   DEL         |   SPC   |   ESC   |   RALT  |
 
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                      &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6
-&out OUT_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&sys_reset    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &kp F24  &to 0   &trans  &trans  &trans  &trans   &trans   &trans
-                                                &none            &none            &none            &none    &trans  &trans  &trans  &trans
+&bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF                  &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &trans  &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+                                                &none            &none            &none            &none   &trans  &trans  &trans  &trans
             >;
         };
     };
