@@ -1,3 +1,4 @@
 build/
 release/
 config/Makefile
+.DS_Store
