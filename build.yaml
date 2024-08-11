@@ -12,12 +12,5 @@
 #     shield: reviung41
 #
 ---
-include:
-  - board: nice_nano_v2
-    shield: owl_left
-  - board: nice_nano_v2
-    shield: owl_right
-  - board: nrfmicro_13
-    shield: owl_left
-  - board: nrfmicro_13
-    shield: owl_right
+board: [ "nice_nano_v2", "nrfmicro_13" ]
+shield: [ "owl_left", "owl_right" ]
