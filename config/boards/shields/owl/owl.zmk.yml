@@ -9,6 +9,7 @@ features:
   - keys
   - display
   - underglow
+  - studio
 siblings:
   - owl_left
   - owl_right
