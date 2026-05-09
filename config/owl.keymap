@@ -16,7 +16,6 @@
     behaviors {
         sdel: sdel {
             compatible = "zmk,behavior-mod-morph";
-            label = "SDEL";
             bindings = <&kp BACKSPACE>, <&kp DEL>;
 
             #binding-cells = <0>;
