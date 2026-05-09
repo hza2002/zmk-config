@@ -47,4 +47,9 @@
     chosen {
         zmk,underglow = &led_strip;
     };
+
+    ext_power@0 {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+    };
 };
