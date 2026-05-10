@@ -25,16 +25,11 @@
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
-
-        /* SPI */
-        reg = <0>; /* ignored, but necessary for SPI bindings */
+        reg = <0>;
         spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-        chain-length = <36>; /* arbitrary; change at will */
+        chain-length = <36>;
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
-
         color-mapping = <
             LED_COLOR_ID_GREEN
             LED_COLOR_ID_RED
@@ -48,7 +43,7 @@
         zmk,underglow = &led_strip;
     };
 
-    ext_power@0 {
+    ext_power {
         compatible = "zmk,ext-power-generic";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
     };
