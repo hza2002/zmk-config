@@ -5,3 +5,8 @@ include:
     snippet: studio-rpc-usb-uart
   - board: nice_nano//zmk
     shield: owl_right
+  - board: nice_nano//zmk
+    shield: owl_lite_left
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano//zmk
+    shield: owl_lite_right

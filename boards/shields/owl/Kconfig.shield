@@ -6,3 +6,9 @@ config SHIELD_OWL_LEFT
 
 config SHIELD_OWL_RIGHT
     def_bool $(shields_list_contains,owl_right)
+
+config SHIELD_OWL_LITE_LEFT
+    def_bool $(shields_list_contains,owl_lite_left)
+
+config SHIELD_OWL_LITE_RIGHT
+    def_bool $(shields_list_contains,owl_lite_right)

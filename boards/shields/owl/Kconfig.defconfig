@@ -20,7 +20,26 @@ config BT_MAX_PAIRED
 
 endif
 
-if SHIELD_OWL_LEFT || SHIELD_OWL_RIGHT
+if SHIELD_OWL_LITE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Owl Lite"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+config BT_MAX_CONN
+    default 6
+
+config BT_MAX_PAIRED
+    default 6
+
+endif
+
+if SHIELD_OWL_LEFT || SHIELD_OWL_RIGHT || SHIELD_OWL_LITE_LEFT || SHIELD_OWL_LITE_RIGHT
 
 config ZMK_SPLIT
     default y
@@ -51,6 +70,5 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
-
 
 endif
