@@ -36,6 +36,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <0>;
         };
     };
 
@@ -43,7 +44,7 @@
         compatible = "zmk,combos";
 
         combo_capsword {
-            timeout-ms = <40>;
+            timeout-ms = <60>;
             require-prior-idle-ms = <125>;
             key-positions = <16 19>;
             bindings = <&caps_word>;
