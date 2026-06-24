@@ -1,12 +1,15 @@
 ---
 include:
+  # studio-rpc-usb-uart snippet temporarily removed for both _left builds —
+  # it pulls in USB CDC ACM + UART RPC which fail to suspend on Zephyr 4.1
+  # and prevent macOS from entering deep sleep.
+  # Re-add together with CONFIG_ZMK_STUDIO=y when editing the keymap via Studio.
+  # Ref: https://github.com/zmkfirmware/zmk/issues/3195
   - board: nice_nano//zmk
     shield: owl_left
-    snippet: studio-rpc-usb-uart
   - board: nice_nano//zmk
     shield: owl_right
   - board: nice_nano//zmk
     shield: owl_lite_left
-    snippet: studio-rpc-usb-uart
   - board: nice_nano//zmk
     shield: owl_lite_right
